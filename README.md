@@ -1,5 +1,7 @@
 # BOSH Release for syslog-relay
 
+ Syslog Relay to send syslog to multiple backend servers while still using a single syslog endpoint
+
 ## Usage
 
 To use this bosh release, first upload it to your bosh:
@@ -57,20 +59,3 @@ As a developer of this release, create new releases and upload them:
 ```
 bosh create release --force && bosh -n upload release
 ```
-
-### Final releases
-
-To share final releases:
-
-```
-bosh create release --final
-```
-
-By default the version number will be bumped to the next major number. You can specify alternate versions:
-
-
-```
-bosh create release --final --version 2.1
-```
-
-After the first release you need to contact [Dmitriy Kalinin](mailto://dkalinin@pivotal.io) to request your project is added to https://bosh.io/releases (as mentioned in README above).

@@ -1,0 +1,28 @@
+---
+name: syslog-relay
+packages: []
+templates:
+  bin/pre-start: bin/pre-start
+  bin/monit_debugger: bin/monit_debugger
+  config/rsyslog.conf.erb: config/rsyslog.conf
+  data/properties.sh.erb: data/properties.sh
+  helpers/ctl_setup.sh: helpers/ctl_setup.sh
+  helpers/ctl_utils.sh: helpers/ctl_utils.sh
+
+properties:
+  syslog-relay.port:
+    description: Port of syslog relay
+    default: 514
+  syslog-relay.backends:
+    description: List of backend servers to send syslog to
+    default: []
+    example: |
+      syslog-relay:
+        backend:
+          - ip: 192.168.2.1
+            port: 10514
+            protocol: tcp
+
+  syslog-relay.custom:
+    description: Custom config for rsyslog
+    default: ""

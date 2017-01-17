@@ -7,9 +7,9 @@ update:
   serial: false
 
 instance_groups:
-  - name: just_install_packages
+  - name: syslog-relay
     jobs:
-    - name: just_install_packages
+    - name: syslog-relay
       release: syslog-relay
     instances: 1
     persistent_disk: 0

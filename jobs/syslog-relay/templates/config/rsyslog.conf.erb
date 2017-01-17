@@ -1,0 +1,13 @@
+
+$ModLoad imudp
+$UDPServerRun <%= p('syslog-relay.port') %>
+
+$ModLoad imtcp
+$InputTCPServerRun <%= p('syslog-relay.port') %>
+
+
+<% p('syslog-relay.backends', []).each do |backend| %>
+action(type="omfwd" Target="<%= backend["ip"] %>" Port="<%= backend["port"] %>" Protocol="<%= backend["protocol"] %>" )
+<% end %>
+
+<%= p('syslog-relay.custom') %>
