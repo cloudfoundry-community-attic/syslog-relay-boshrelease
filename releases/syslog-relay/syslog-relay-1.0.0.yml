@@ -1,0 +1,15 @@
+---
+packages: []
+jobs:
+- name: syslog-relay
+  version: 1365e9479a85ff911e24cc16bc8fc965a8c4258d
+  fingerprint: 1365e9479a85ff911e24cc16bc8fc965a8c4258d
+  sha1: e0025e0ed3894cf1f450302478a5c24fa042035d
+license:
+  version: 06c47f6ad4218af73b6f9ea573cc93a3f351c51c
+  fingerprint: 06c47f6ad4218af73b6f9ea573cc93a3f351c51c
+  sha1: 9c4e291dd09e9e0f7519e1d58d7cc2417f1c9a8f
+commit_hash: 062d3c88
+uncommitted_changes: true
+name: syslog-relay
+version: 1.0.0
